@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { toast, Toaster } from 'react-hot-toast';
 
-const BASE_URL = "http://localhost:5000/api/v1/";
+const BASE_URL = "https://expensetrackbackend-m2xc.onrender.com/api/v1/";
 
 const GlobalContext = React.createContext();
 
