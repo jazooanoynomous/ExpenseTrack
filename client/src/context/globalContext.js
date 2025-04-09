@@ -71,9 +71,13 @@ export const GlobalProvider = ({ children }) => {
  
   const checkUser = async () => {
     try {
-      const { data } = await axios.post(`${BASE_URL}`,{}, {
-        withCredentials: true,
-      });
+      const { data } = await axios.post(
+        `${BASE_URL}checkuser`,
+        {},
+        {
+          withCredentials: true,
+        }
+      );
       if (data.status) {
         setUser(data.user);
         setName(data.name);
@@ -87,6 +91,7 @@ export const GlobalProvider = ({ children }) => {
       setUser(null);
     }
   };
+  
 
   useEffect(() => {
     checkUser();
