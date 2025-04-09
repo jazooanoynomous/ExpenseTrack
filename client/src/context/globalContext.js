@@ -68,10 +68,10 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  // Check user authentication status
+ 
   const checkUser = async () => {
     try {
-      const { data } = await axios.post(`http://localhost:5000`,{}, {
+      const { data } = await axios.post(`${BASE_URL}`,{}, {
         withCredentials: true,
       });
       if (data.status) {
