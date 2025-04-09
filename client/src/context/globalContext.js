@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { toast, Toaster } from 'react-hot-toast';
 
-const BASE_URL = "https://expenseba-c0b7953809e8.herokuapp.com/api/v1/";
+const BASE_URL = "https://expensetrackbackend-m2xc.onrender.com/api/v1/";
 
 const GlobalContext = React.createContext();
 
@@ -71,7 +71,7 @@ export const GlobalProvider = ({ children }) => {
  
   const checkUser = async () => {
     try {
-      const { data } = await axios.post(`https://expenseba-c0b7953809e8.herokuapp.com`,{}, {
+      const { data } = await axios.post(`https://expensetrackbackend-m2xc.onrender.com/`,{}, {
         withCredentials: true,
       });
       if (data.status) {
