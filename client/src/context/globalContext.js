@@ -71,7 +71,7 @@ export const GlobalProvider = ({ children }) => {
  
   const checkUser = async () => {
     try {
-      const { data } = await axios.post(BASE_URL,{}, {
+      const { data } = await axios.post(`https://expenseba-c0b7953809e8.herokuapp.com`,{}, {
         withCredentials: true,
       });
       if (data.status) {
